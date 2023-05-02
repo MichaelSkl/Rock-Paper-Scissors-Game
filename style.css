@@ -1,0 +1,125 @@
+/* Typography */
+
+html * {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0px;
+}
+
+/* Styles */
+
+body {
+    height: 100%;
+    background-color: rgb(231, 231, 231);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+}
+.playerChoice {
+    position: relative;
+    top: 0px;
+    height: 148px;
+    width: 320px;
+    background-color: #fff;
+    text-decoration: none;
+    border: solid 3px #000;
+    box-shadow: 0px 10px 0px #000;
+    transition: 0.3s;
+    margin: 4px;
+    margin-top: 56px;
+    margin-bottom: 64px;
+}
+.playerChoiceText {
+    margin-top: 8px;
+}
+.playerButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.playerChoice:hover {
+    position: relative;
+    top: 10px;
+    box-shadow: 0px 0px 0px #000;
+}
+.callToAction {
+    animation: callToActionAnimation 2s infinite;
+}
+.results {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.panels {
+    margin-top: 216px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.resultsPanel {
+    padding: 32px;
+    width: 320px;
+    border: solid 3px #000;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.soundButton {
+    border: none;
+    margin: 24px;
+    padding: 0px;
+}
+.winnerText {
+    position: absolute; 
+    top: 100px; 
+    display: none;
+    animation: winnerAnimation 2s infinite;
+}
+.playAgain {
+    visibility: hidden;
+    position: relative;
+    top: 0px;
+    height: 88px;
+    width: 320px;
+    background-color: #fff;
+    text-decoration: none;
+    border: solid 3px #000;
+    box-shadow: 0px 10px 0px #000;
+    transition: 0.3s;
+    margin: 4px;
+    margin-top: 56px;
+    margin-bottom: 64px;
+}
+.playAgain:hover {
+    position: relative;
+    top: 10px;
+    box-shadow: 0px 0px 0px #000;
+}
+.scoreStyles {
+    display: flex;
+    flex-direction: row;
+    margin: 24px;
+}
+
+/* Animations */
+
+@keyframes callToActionAnimation {
+    0%   {transform: scale(1);}
+    50%  {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+@keyframes winnerAnimation {
+    0%   {transform: scale(1);}
+    50%  {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+  

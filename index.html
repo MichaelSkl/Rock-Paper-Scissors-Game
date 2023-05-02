@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <title>Rock, paper, scissors</title>
+            <link rel="stylesheet" href="style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">        
+        </head>
+        <body>
+<!-- Header showing player and computer points -->
+            <header>
+                <div class="scoreStyles">
+                    <h3>Player:<span id="playerScorePanel">0</span></h3>
+                    <h3 style="margin-left: 16px;">Computer:<span id="computerScorePanel">0</span></h3>
+                </div>
+                <button onclick="soundSettings()" class="soundButton" type="button">
+                    <img class="soundImage" src="Assets/soundon.png" height="40px">
+                </button>
+            </header>
+<!-- First screen with options -->
+            <div class="playerButtons">
+                <h1 class="callToAction">Choose your move</h1>
+                <div>
+                    <button onclick="playerRock()" class="playerChoice" type="button">
+                        <img src="Assets/rock.png" alt="Rock" height="88px">
+                        <h2 class="playerChoiceText">Rock</h2>
+                    </button>
+                    <button onclick="playerPaper()" class="playerChoice" type="button">
+                        <img src="Assets/paper.png" alt="Rock" height="88px">
+                        <h2 class="playerChoiceText">Paper</h2>
+                    </button>
+                    <button onclick="playerScissors()" class="playerChoice" type="button">
+                        <img src="Assets/scissors.png" alt="Rock" height="88px">
+                        <h2 class="playerChoiceText">Scissors</h2>
+                    </button>
+                </div>
+            </div>
+<!-- Second screen to compare player with computer choices -->
+        <div class="results">
+            <h1 class="winnerText">Win!</h1>
+            <div class="panels">
+                <div class="resultsPanel">
+                    <h1 style="align-self: center;" >Player:</h1>
+                    <img id="choiceImage" style="align-self: center; margin-top: 16px" src="Assets/rock.png" alt="Rock" height="116px">
+                </div>
+                <h1 style="margin: 16px;">Vs</h1>
+                <div class="resultsPanel">
+                    <h1 style="align-self: center;">Computer</h1>
+                    <img id="computerChoiceImage" style="align-self: center; margin-top: 16px" src="Assets/draw.gif" alt="Rock" height="116px">
+                </div>
+            </div>
+            <button class="playAgain" onclick="restart()">
+                <h2>Play again</h2>
+            </button>
+        </div>
+        <audio class="audiobg" src="Assets/background music.mp3" autoplay loop></audio>
+        <script src="script.js"></script>
+        </body>
+    </html>
